@@ -2,10 +2,10 @@
 <?php include 'validar_sesion.php'; ?>
 
 <?php
-$id_user = $_SESSION['id_postulantes'];
-$nick = $_SESSION['curp'];
+$id_postulantes = $_SESSION['id_postulantes'];
+$curp = $_SESSION['curp'];
 $nombre = $_SESSION['postulante'];
-$id_rol = $_SESSION['id_estatus'];
+$id_estatus = $_SESSION['id_estatus'];
 ?>
 
 <!DOCTYPE html>
@@ -212,7 +212,7 @@ $id_rol = $_SESSION['id_estatus'];
     <!-- MODAL SALIR-->
 
     <!-- FIN MODAL MODIFICAR PW -->
-    <input type="hidden" id="id_user" value="<?php echo $id_user ?>">
+    <input type="hidden" id="id_user" value="<?php echo $id_postulantes ?>">
     <input type="hidden" id="pw">
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true" id="modificar_pw">
@@ -272,7 +272,9 @@ $id_rol = $_SESSION['id_estatus'];
         </div>
     </div>
 
+    <!--
     <script src="../../../../js/Admin/Perfil/Perfil.js"></script>
+                    -->
 </body>
 
 <script>

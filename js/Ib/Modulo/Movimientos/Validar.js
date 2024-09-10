@@ -80,8 +80,11 @@ function validarUltimoMovimiento(movimiento_general,id_object,fecha_movimiento,n
 }
 
 ///LA FUNCION OBTIENE EL TIPO DE CONTRATACION  Y CENTRO DE TRABAJO CUANDO SE CAMBIA EL EVENTO DE  NUM_PLAZA
-document.getElementById("id_tbl_control_plazas_hraes").addEventListener("change", function() {
-    let id_tbl_control_plazas_hraes = this.value;
+document.getElementById("id_clues").addEventListener("change", function() {
+    let id_clues = this.value;
+
+    console.log(id_clues);
+    /*
     $.post("../../../../App/Controllers/Central/MovimientosC/NumPlazaC.php", {
         id_tbl_control_plazas_hraes: id_tbl_control_plazas_hraes,
     },
@@ -101,7 +104,7 @@ document.getElementById("id_tbl_control_plazas_hraes").addEventListener("change"
             $('#tipo_contratacion_mx').val(contratacion); 
             $('#centro_trabajo_mx').val(centroTrabajo);
         }
-    );
+    );*/
   });
 
 

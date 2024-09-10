@@ -12,7 +12,7 @@ include '../../nav-menu.php';
                         <div class="vertical-line"></div>
                     </div>
                     <div class="col padding-left-0">
-                        <h4>¡Hola <?php echo $nombre ?>!</h4>
+                        <h4>¡HOLA, <?php echo $nombre ?>!</h4>
                     </div>
                 </div>
             </div>
@@ -22,14 +22,32 @@ include '../../nav-menu.php';
 
     <div class="card border-light">
         <div class="card-body">
+            <!--
             <h3 class="card-title tittle-card-index">SISTEMA INTEGRAL DE RECURSOS HUMANOS</h3>
-
+-->
 
             <div class="row">
                 <div class="container">
                     <div class="alert alert-warning" role="alert">
                         This is a warning alert—check it out!
                     </div>
+                </div>
+            </div>
+
+            <br>
+            <div class="row">
+                <div class="container">
+
+                    <div class="col-12 col-md-12 col-lg-12 col-xl-8 mb-8">
+                        <div class="card font-size-modulo shadow-lg">
+                            <h5 class="card-header text-center background-modal color-text-tittle">Mi información</h5>
+                            <div class="card-body">
+                                <?php include 'mostrar.php' ?>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
 
@@ -92,10 +110,16 @@ include '../../nav-menu.php';
             </div>
         </div>
     </div>
+
             -->
 
-    <input type="hidden" value="<?php echo $id_rol ?>" id="id_role_">
+            <input type="hidden" value="<?php echo $id_postulantes ?>" id="id_postulantes">
 
 </div>
-
+<!--
 <script src="../../../../js/Global/Inicio/Inicio.js"></script>
+            -->
+
+<?php include '../../librerias.php' ?>
+<?php include 'AgregarEditar.php'; ?>
+<script src="../../../../js/Global/Inicio/postulacion.js"></script>
