@@ -12,7 +12,7 @@ include '../../nav-menu.php';
                         <div class="vertical-line"></div>
                     </div>
                     <div class="col padding-left-0">
-                        <h4>¡HOLA, <?php echo $nombre ?>!</h4>
+                        <h4>SISTEMA INTEGRAL DE RECURSOS HUMANOS</h4>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,13 @@ include '../../nav-menu.php';
             <div class="row">
                 <div class="container">
                     <div class="alert alert-warning" role="alert">
-                        This is a warning alert—check it out!
+                        <?php echo $nombre ?>. Es esencial verificar la información precargada. Si
+                        encuentras errores, utiliza el botón 'Actualizar' para corregirla. Además, asegúrate de
+                        seleccionar la CLUE adecuada según tus preferencias. Si la información es válida, <strong>
+                            aparecerá un
+                            mensaje en verde indicando éxito</strong> . En caso contrario, se mostrará un mensaje en
+                        <strong> rojo con las
+                            observaciones que deben corregirse. </strong>
                     </div>
                 </div>
             </div>
@@ -113,7 +119,7 @@ include '../../nav-menu.php';
 
             -->
 
-            <input type="hidden" value="<?php echo $id_postulantes ?>" id="id_postulantes">
+    <input type="hidden" value="<?php echo $id_postulantes ?>" id="id_postulantes">
 
 </div>
 <!--

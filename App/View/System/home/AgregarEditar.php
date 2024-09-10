@@ -13,9 +13,9 @@
                             <h1 class="text-tittle-card"><label id="titulolicencia"></label>
                                 Actualizar Informaci&oacuten.
                             </h1>
-                            <p class="color-text-white">Este espacio está destinado para añadir, visualizar o modificar
-                                información relacionada con licencias. Aquí puedes registrar nuevos tipos de licencias,
-                                actualizar fechas así como gestionar observaciones
+                            <p class="color-text-white">Es fundamental verificar que la información sea correcta. En
+                                caso contrario, debe corregirse y actualizarse con los datos precisos. Además, debes
+                                asegurarte de que la CLUE seleccionada sea la adecuada.
                             </p>
                         </div>
                     </div>
@@ -77,7 +77,7 @@
                         </div>
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                             <label for="email" class="text-input-rem form-label input-text-form">Apellido
-                                materno</label><label class="text-required">*</label>
+                                materno</label><label class="text-required"></label>
                             <input type="text" onkeyup="convertirAMayusculas(event,'segundo_apellido')"
                                 id="segundo_apellido" maxlength="30" placeholder="Apellido materno"
                                 class="form-control custom-input">
@@ -104,8 +104,8 @@
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                             <label for="campo" class="text-input-rem form-label input-text-form">No.
                                 Telefónico</label><label class="text-required">*</label>
-                            <input oninput="validarNumero(this)" type="number" placeholder="No. Telefónico" class="form-control custom-input"
-                                id="telefono" maxlength="80">
+                            <input oninput="validarNumero(this)" type="number" placeholder="No. Telefónico"
+                                class="form-control custom-input" id="telefono" maxlength="80">
                             <div class="line"></div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                     </div>
 
                     <div class="container">
-                        <p>Estapcio de seleccion de clue</p>
+                        <p>Elige la CLUE adecuada según tu preferencia*</p>
                     </div>
 
 

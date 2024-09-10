@@ -161,7 +161,6 @@ function validarDataPost() {
         validarData(cedula_sep, 'Cédula Prof.') &&
         validarData(nombre, 'Nombre') &&
         validarData(primer_apellido, 'Apellido paterno') &&
-        validarData(segundo_apellido, 'Apellido materno') &&
         validarData(curp, 'CURP') &&
         validarData(email, 'Correos') &&
         validarData(telefono, 'No. Telefónico') &&
