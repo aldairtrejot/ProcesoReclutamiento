@@ -12,7 +12,7 @@ include '../../nav-menu.php';
                         <div class="vertical-line"></div>
                     </div>
                     <div class="col padding-left-0">
-                        <h4>¡Hola <?php echo $nombre ?>! ¡Bienvenido al sistema!</h4>
+                        <h4>¡Hola <?php echo $nombre ?>!</h4>
                     </div>
                 </div>
             </div>
@@ -23,28 +23,39 @@ include '../../nav-menu.php';
     <div class="card border-light">
         <div class="card-body">
             <h3 class="card-title tittle-card-index">SISTEMA INTEGRAL DE RECURSOS HUMANOS</h3>
-            <?php if ($id_rol == 2) { ?> <!-- ROLE_CENTRAL -->
+
+
+            <div class="row">
+                <div class="container">
+                    <div class="alert alert-warning" role="alert">
+                        This is a warning alert—check it out!
+                    </div>
+                </div>
+            </div>
+
+
+            <?php if (false) { ?> <!-- ROLE_CENTRAL -->
                 <div class="row">
                     <div class="col">
                         <?php include 'CardCentral.php' ?>
                     </div>
                 </div>
             <?php } ?>
-            <?php if ($id_rol == 3) { ?> <!-- ROLE_HRAES -->
+            <?php if (false) { ?> <!-- ROLE_CENTRAL -->
                 <div class="row">
                     <div class="col">
                         <?php include 'CardHraes.php' ?>
                     </div>
                 </div>
             <?php } ?>
-            <?php if ($id_rol == 4) { ?> <!-- ROLE_FEDERALIZADA -->
+            <?php if (false) { ?> <!-- ROLE_CENTRAL -->
                 <div class="row">
                     <div class="col">
                         <?php //include 'CardHraes.php' ?>
                     </div>
                 </div>
             <?php } ?>
-            <?php if ($id_rol == 1) { ?><!-- ROLE_ALL -->
+            <?php if (false) { ?> <!-- ROLE_CENTRAL -->
                 <div class="row">
                     <div class="col">
                         <?php include 'CardHraes.php' ?>
@@ -55,6 +66,7 @@ include '../../nav-menu.php';
     </div>
     <br>
 
+    <!--
     <div class="card border-light shadow-lg">
         <div class="card-body">
             <div class="btn-container">
@@ -80,6 +92,7 @@ include '../../nav-menu.php';
             </div>
         </div>
     </div>
+            -->
 
     <input type="hidden" value="<?php echo $id_rol ?>" id="id_role_">
 

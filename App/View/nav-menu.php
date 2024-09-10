@@ -2,10 +2,10 @@
 <?php include 'validar_sesion.php'; ?>
 
 <?php
-$id_user = $_SESSION['id_user'];
-$nick = $_SESSION['nick'];
-$nombre = $_SESSION['nombre'];
-$id_rol = $_SESSION['id_rol'];
+$id_user = $_SESSION['id_postulantes'];
+$nick = $_SESSION['curp'];
+$nombre = $_SESSION['postulante'];
+$id_rol = $_SESSION['id_estatus'];
 ?>
 
 <!DOCTYPE html>
@@ -87,7 +87,7 @@ $id_rol = $_SESSION['id_rol'];
                     style="--bs-scroll-height: 100px;">
 
                     <!-- ADMIN -->
-                    <?php if ($id_rol == 1) { ?>
+                    <?php if (false) { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-text-tittle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -101,7 +101,7 @@ $id_rol = $_SESSION['id_rol'];
                     <!-- ADMIN -->
 
                     <!-- CENTRAL -->
-                    <?php if ($id_rol == 1 || $id_rol == 2) { ?>
+                    <?php if (false) { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-text-tittle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -119,7 +119,7 @@ $id_rol = $_SESSION['id_rol'];
                     <!-- CENTRAL -->
 
                     <!-- HRAES -->
-                    <?php if ($id_rol == 1 || $id_rol == 3) { ?>
+                    <?php if (false) { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-text-tittle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -137,7 +137,7 @@ $id_rol = $_SESSION['id_rol'];
                     <!-- HRAES -->
 
                     <!-- FEDERALIZADA -->
-                    <?php if ($id_rol == 1 || $id_rol == 4) { ?>
+                    <?php if (false) { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-text-tittle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -153,7 +153,7 @@ $id_rol = $_SESSION['id_rol'];
                     <!-- FEDERALIZADA -->
 
                     <!-- FEDERALIZADA -->
-                    <?php if ($id_rol == 1) { ?>
+                    <?php if (false) { ?>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle nav-text-tittle" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -177,8 +177,11 @@ $id_rol = $_SESSION['id_rol'];
                             data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-cog icon-config"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-result">
+                            <!--
                             <button onclick="modalEditPw();" class="dropdown-item">Modificar contraseña</button>
                             <div class="dropdown-divider"></div>
+                            -->
+                            
                             <button onclick="activarModal();" class="dropdown-item">Salir</button>
                         </ul>
                     </li>

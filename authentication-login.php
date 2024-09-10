@@ -91,11 +91,13 @@
         password: $('#password').val()
       };
       $.post('inicio_sesion.php', data, function (response) {
-        if (response == 'acceso') {
+        //console.log(response);
+        if (response){
           window.location.href = 'App/View/System/home/index.php';
         } else {
           ventanaMensaje("Usuario o contraseña incorrectos");
         }
+
       });
       e.preventDefault();
     });

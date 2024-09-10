@@ -4,7 +4,7 @@ if(!isset($_SESSION))
 { 
     session_start(); 
 } 
-if (isset($_SESSION['id_user']) && isset($_SESSION['nombre']) && isset($_SESSION['nick']) && isset($_SESSION['status']) && isset($_SESSION['id_rol'])){
+if (isset($_SESSION['id_postulantes']) && isset($_SESSION['curp']) && isset($_SESSION['postulante']) && isset($_SESSION['id_estatus'])){
 
 }else {
     header('Location: ../../authentication-login.php');
