@@ -1,4 +1,4 @@
-<?php include '../../../conexion.php'; ?>
+<?php include '../../../../conexion.php'; ?>
 <?php include 'validar_sesion.php'; ?>
 
 <?php
@@ -212,7 +212,6 @@ $id_estatus = $_SESSION['id_estatus'];
     <!-- MODAL SALIR-->
 
     <!-- FIN MODAL MODIFICAR PW -->
-    <input type="hidden" id="id_user" value="<?php echo $id_postulantes ?>">
     <input type="hidden" id="pw">
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true" id="modificar_pw">
