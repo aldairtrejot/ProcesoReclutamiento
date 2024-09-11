@@ -1,4 +1,4 @@
-<?php include '../../../../conexion.php'; ?>
+<?php include '../../../conexion.php'; ?>
 <?php include 'validar_sesion.php'; ?>
 
 <?php
