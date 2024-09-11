@@ -1,7 +1,7 @@
 <?php
 
 include '../../../Controllers/Hrae/GlobalC/ArrayC.php';
-include '../../../../conexion.php';
+//include '../../../../conexion.php';
 include 'queryM.php';
 
 $password = "pg2024";
