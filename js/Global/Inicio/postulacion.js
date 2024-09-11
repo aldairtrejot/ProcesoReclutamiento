@@ -54,7 +54,6 @@ function modalAgregarEditar() {
         id_postulantes: id_postulantes
     },
         function (data) {
-            console.log(data);
 
             let jsonData = JSON.parse(data);
             let result = jsonData.result;
