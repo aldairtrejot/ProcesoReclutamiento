@@ -2,10 +2,12 @@
 
 $password = "pg2024";
 $username = "postgres";
-$dbname = "postulantes_produccion";
+$dbname = "procesoreclutamiento_test";
 $host = "localhost";
 $port = "5432";
 $options = "--client_encoding=UTF8";
+
+
 $connectionDB = "host=$host port=$port dbname=$dbname user=$username password=$password options=$options";
 $connectionDBsPro = pg_pconnect($connectionDB);
 

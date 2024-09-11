@@ -1,10 +1,12 @@
 <?php //include '../../../../conexion.php'; 
 $password = "pg2024";
 $username = "postgres";
-$dbname = "postulantes_produccion";
+$dbname = "procesoreclutamiento_test";
 $host = "localhost";
 $port = "5432";
 $options = "--client_encoding=UTF8";
+
+
 $connectionDB = "host=$host port=$port dbname=$dbname user=$username password=$password options=$options";
 $connectionDBsPro = pg_pconnect($connectionDB);
 
@@ -191,7 +193,7 @@ $id_estatus = $_SESSION['id_estatus'];
                             <button onclick="modalEditPw();" class="dropdown-item">Modificar contraseña</button>
                             <div class="dropdown-divider"></div>
                             -->
-
+                            
                             <button onclick="activarModal();" class="dropdown-item">Salir</button>
                         </ul>
                     </li>
