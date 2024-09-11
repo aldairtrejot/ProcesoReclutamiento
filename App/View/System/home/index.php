@@ -34,8 +34,8 @@ include '../../nav-menu.php';
                         seleccionar la CLUE adecuada según tus preferencias. Si la información es válida, <strong>
                             aparecerá un
                             mensaje en verde indicando éxito</strong> . En caso contrario, se mostrará un mensaje en
-                        <strong> rojo con las
-                            observaciones que deben corregirse. </strong>
+                            <strong> rojo con las
+                        observaciones que deben corregirse. </strong>
                     </div>
                 </div>
             </div>
