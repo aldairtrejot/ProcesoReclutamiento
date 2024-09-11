@@ -13,9 +13,7 @@
                             <h1 class="text-tittle-card"><label id="titulolicencia"></label>
                                 Actualizar Informaci&oacuten.
                             </h1>
-                            <p class="color-text-white">Es fundamental verificar que la información sea correcta. En
-                                caso contrario, debe corregirse y actualizarse con los datos precisos. Además, debes
-                                asegurarte de que la CLUE seleccionada sea la adecuada.
+                            <p class="color-text-white">Es fundamental validar que la información sea correcta. 
                             </p>
                         </div>
                     </div>
@@ -112,22 +110,24 @@
 
                     <div class="row mx-1">
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <label for="campo" class="text-input-rem form-label input-text-form">Entidad de
-                                        nacimiento</label>
-                                    <label class="text-required">*</label>
+                            <fieldset disabled>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="campo" class="text-input-rem form-label input-text-form">Entidad de
+                                            nacimiento</label>
+                                        <label class="text-required">*</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <select class="form-control custom-select selectpicker"
-                                        data-style="input-select-selectpicker" aria-label="Default select example"
-                                        data-live-search="true" id="id_cat_entidad_nacimiento"
-                                        data-none-results-text="Sin resultados">
-                                    </select>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <select class="form-control custom-select selectpicker"
+                                            data-style="input-select-selectpicker" aria-label="Default select example"
+                                            data-live-search="true" id="id_cat_entidad_nacimiento"
+                                            data-none-results-text="Sin resultados">
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
+                            </fieldset>
                         </div>
 
 
