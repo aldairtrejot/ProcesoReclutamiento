@@ -157,9 +157,7 @@ function validarDataPost() {
     let id_cat_entidad_nacimiento = document.getElementById("id_cat_entidad_nacimiento").value;
     let id_clues = document.getElementById("id_clues").value;
 
-    if (validarData(desc_cedula_sep, 'Carrera') &&
-        validarData(cedula_sep, 'Cédula Prof.') &&
-        validarData(nombre, 'Nombre') &&
+    if (validarData(nombre, 'Nombre') &&
         validarData(primer_apellido, 'Apellido paterno') &&
         validarData(curp, 'CURP') &&
         validarData(email, 'Correos') &&
@@ -317,4 +315,4 @@ function validarEmail(valor) {
 
 function validarNumero(input) {
     input.value = input.value.replace(/[^\d]/g, '');
-  }
+}

@@ -1,4 +1,14 @@
-<?php include '../../../../conexion.php'; ?>
+<?php //include '../../../../conexion.php'; 
+$password = "pg2024";
+$username = "postgres";
+$dbname = "postulantes_produccion";
+$host = "localhost";
+$port = "5432";
+$options = "--client_encoding=UTF8";
+$connectionDB = "host=$host port=$port dbname=$dbname user=$username password=$password options=$options";
+$connectionDBsPro = pg_pconnect($connectionDB);
+
+?>
 <?php include 'validar_sesion.php'; ?>
 
 <?php
@@ -181,7 +191,7 @@ $id_estatus = $_SESSION['id_estatus'];
                             <button onclick="modalEditPw();" class="dropdown-item">Modificar contraseña</button>
                             <div class="dropdown-divider"></div>
                             -->
-                            
+
                             <button onclick="activarModal();" class="dropdown-item">Salir</button>
                         </ul>
                     </li>
@@ -212,6 +222,7 @@ $id_estatus = $_SESSION['id_estatus'];
     <!-- MODAL SALIR-->
 
     <!-- FIN MODAL MODIFICAR PW -->
+
     <input type="hidden" id="pw">
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
         aria-hidden="true" id="modificar_pw">

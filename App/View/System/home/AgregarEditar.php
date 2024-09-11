@@ -39,21 +39,21 @@
                             </fieldset>
                         </div>
 
-                        <div class="col-12 col-md-12 col-lg-5 col-xl-5 mb-4">
-                            <label for="campo" class="text-input-rem form-label input-text-form">Carrera</label><label
-                                class="text-required">*</label>
-                            <input type="text" placeholder="Carrera"
-                                onkeyup="convertirAMayusculas(event,'desc_cedula_sep')"
-                                class="form-control custom-input" id="desc_cedula_sep" maxlength="40">
-                            <div class="line"></div>
-                        </div>
-
                         <div class="col-12 col-md-6 col-lg-3 col-xl-3 mb-4">
                             <label for="campo" class="text-input-rem form-label input-text-form">Cédula
-                                Prof.</label><label class="text-required">*</label>
+                                Prof.</label><label class="text-required"></label>
                             <input type="text" id="cedula_sep" maxlength="25"
                                 onkeyup="convertirAMayusculas(event,'cedula_sep')" placeholder="Cédula profesional"
                                 class="form-control custom-input">
+                            <div class="line"></div>
+                        </div>
+
+                        <div class="col-12 col-md-12 col-lg-5 col-xl-5 mb-4">
+                            <label for="campo" class="text-input-rem form-label input-text-form">Carrera</label><label
+                                class="text-required"></label>
+                            <input type="text" placeholder="Carrera"
+                                onkeyup="convertirAMayusculas(event,'desc_cedula_sep')"
+                                class="form-control custom-input" id="desc_cedula_sep" maxlength="40">
                             <div class="line"></div>
                         </div>
                     </div>
