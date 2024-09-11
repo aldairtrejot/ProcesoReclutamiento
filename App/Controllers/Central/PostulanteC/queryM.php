@@ -66,7 +66,7 @@ class PostulantesM
     {
         $query = pg_query("SELECT 	
                                 postulante.clues.id_clues,
-                                UPPER(postulante.clues.clues)
+                                CONCAT(UPPER(postulante.clues.clues), ' - ', UPPER(postulante.clues.nombre_unidad))
                             FROM postulante.clues
                             WHERE id_cat_entidad = $idEntidad
                             AND plazas::INTEGER > (
@@ -81,7 +81,7 @@ class PostulantesM
     {
         $query = pg_query("SELECT 	
                                 postulante.clues.id_clues,
-                                UPPER(postulante.clues.clues)
+                                CONCAT(UPPER(postulante.clues.clues), ' - ', UPPER(postulante.clues.nombre_unidad))
                             FROM postulante.clues
                             WHERE postulante.clues.id_clues = $idClue");
         return $query;

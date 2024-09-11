@@ -139,7 +139,7 @@
 
 
                     <div class="row mx-1">
-                        <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-4">
+                        <div class="col-12 col-md-12 col-lg-8 col-xl-8 mb-4">
                             <div class="row">
                                 <div class="col-md-12">
                                     <label for="campo" class="text-input-rem form-label input-text-form">CLUES

@@ -29,13 +29,15 @@ include '../../nav-menu.php';
             <div class="row">
                 <div class="container">
                     <div class="alert alert-warning" role="alert">
-                        <?php echo $nombre ?>. Es esencial verificar la información precargada. Si
-                        encuentras errores, utiliza el botón 'Actualizar' para corregirla. Además, asegúrate de
-                        seleccionar la CLUE adecuada según tus preferencias. Si la información es válida, <strong>
-                            aparecerá un
-                            mensaje en verde indicando éxito</strong> . En caso contrario, se mostrará un mensaje en
-                            <strong> rojo con las
-                        observaciones que deben corregirse. </strong>
+                        <?php echo $nombre ?>. Para continuar con el proceso de selección de candidatos de la bolsa de
+                        trabajo IMSS-BIENESTAR, utiliza el botón 'Actualizar' para complementar la información. Si estás
+                        interesado en las ofertas laborales de tu entidad de nacimiento, selecciona la CLUES disponible
+                        que tenemos para ti. Si la información es correcta, <strong>aparecerá un mensaje en verde
+                            indicando
+                            éxito.</strong> En caso contrario, <strong>se mostrará un mensaje en rojo con las
+                            observaciones que
+                            debes
+                            registrar.</strong>
                     </div>
                 </div>
             </div>
