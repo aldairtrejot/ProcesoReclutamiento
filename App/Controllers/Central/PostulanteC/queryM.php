@@ -105,4 +105,17 @@ class PostulantesM
         $pg_update = pg_update($conexion, 'postulante.postulantes', $datos, $condicion);
         return $pg_update;
     }
+
+    public function getUltimoClues($idClue){
+        $query = pg_query ("SELECT 
+                                * --postulante.clues.plazas
+                            FROM postulante.clues
+                            WHERE postulante.clues.id_clues = $idClue
+                            AND postulante.clues.plazas ::INTEGER = (
+                                                            SELECT COUNT(id_postulantes)
+                                                            FROM postulante.postulantes
+                                                            WHERE postulante.postulantes.id_clues = postulante.clues.id_clues
+                                                        );");
+        return $query;
+    }
 }

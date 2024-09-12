@@ -68,6 +68,7 @@ function modalAgregarEditar() {
             $("#nombre").val(result.nombre);
             $("#primer_apellido").val(result.primer_apellido);
             $("#segundo_apellido").val(result.segundo_apellido);
+            $("#id_clues_result").val(result.id_clues);
 
             $("#id_cat_entidad").val(jsonData.entidad);
             $("#nombre_unidad").val(jsonData.nombre);
@@ -134,7 +135,7 @@ function actualizarInformacionPos() {
             if (data) {
                 notyf.success('Tus cambios han sido guardados exitosamente');
             } else {
-                notyf.arror('"Se produjo un problema inesperado');
+                notyf.error('"Se produjo un problema inesperado');
             }
             ocultarAgregarEditar();
             getData();
@@ -166,10 +167,51 @@ function validarDataPost() {
         campoInvalido(validarCurp(curp), 'CURP') &&
         caracteresCount('No. Telefónico', 10, telefono) &&
         validarEmail(email)) {
-        actualizarInformacionPos();
+        // actualizarInformacionPos();
+        validarClues();
     }
 }
 
+
+function validarClues() {
+
+    let hiddenInput = document.getElementById('id_clues_result');
+    let valor = hiddenInput.value;
+
+    // Comprobar si el valor está vacío
+    if (valor === null || valor.trim() === '') {
+        $.post("../../../../App/Controllers/Central/PostulanteC/ValidateC.php", {
+            id_clues: $("#id_clues").val(),
+        },
+            function (data) {
+                // console.log(data);
+
+                let jsonData = JSON.parse(data);
+                let bool = jsonData.bool;
+                if (bool) {
+                    actualizarInformacionPos();
+                    //console.log('agregar');
+                } else {
+                    notyf.error('La CLUES ya ha sido asignada. Por favor, actualiza la página para reflejar los cambios.');
+                }
+            }
+        );
+    } else {
+        actualizarInformacionPos(); //Con info
+        // console.log('agregar con exito');
+    }
+
+    /*
+    $.post("../../../../App/Controllers/Central/PostulanteC/updateDataC.php", {
+        id_postulantes: id_postulantes,
+        id_clues: $("#id_clues").val(),
+    },
+        function (data) {
+            console.log(data);
+        }
+    );
+    */
+}
 
 //actualizarInformacionPos();
 

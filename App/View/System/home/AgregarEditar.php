@@ -13,7 +13,7 @@
                             <h1 class="text-tittle-card"><label id="titulolicencia"></label>
                                 Actualizar Informaci&oacuten.
                             </h1>
-                            <p class="color-text-white">Es fundamental validar que la información sea correcta. 
+                            <p class="color-text-white">Es fundamental validar que la información sea correcta.
                             </p>
                         </div>
                     </div>
@@ -189,6 +189,7 @@
                             data-dismiss="modal"><i class="fas fa-times"></i> Cancelar</button>
                         <button type="button" class="btn btn-success save-botton-modal"
                             onclick="return validarDataPost();"><i class="fas fa-save"></i> Guardar</button>
+                        <input type="hidden" id="id_clues_result">
                     </div>
                 </div>
             </div>
