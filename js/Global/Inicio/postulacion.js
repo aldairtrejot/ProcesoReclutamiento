@@ -175,42 +175,72 @@ function validarDataPost() {
 
 function validarClues() {
 
-    let hiddenInput = document.getElementById('id_clues_result');
-    let valor = hiddenInput.value;
 
-    // Comprobar si el valor está vacío
-    if (valor === null || valor.trim() === '') {
-        $.post("../../../../App/Controllers/Central/PostulanteC/ValidateC.php", {
-            id_clues: $("#id_clues").val(),
-        },
+    Swal.fire({
+        title: "¿Está seguro?",
+        text: "Asegúrate de que tu información sea correcta, ya que solo podrás actualizarla una vez",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonColor: "#235B4E",
+        cancelButtonColor: "#6c757d",
+        confirmButtonText: "Si, continuar",
+        cancelButtonText: "Cancelar"
+    }).then((result) => {
+
+
+        if (result.isConfirmed) {
+            let hiddenInput = document.getElementById('id_clues_result');
+            let valor = hiddenInput.value;
+
+
+
+            // Comprobar si el valor está vacío
+            if (valor === null || valor.trim() === '') {
+                $.post("../../../../App/Controllers/Central/PostulanteC/ValidateC.php", {
+                    id_clues: $("#id_clues").val(),
+                },
+                    function (data) {
+                        // console.log(data);
+
+                        let jsonData = JSON.parse(data);
+                        let bool = jsonData.bool;
+                        if (bool) {
+                            actualizarInformacionPos();
+                            //console.log('agregar');
+                        } else {
+                            notyf.error('La CLUES ya ha sido asignada. Por favor, actualiza la página para reflejar los cambios.');
+                        }
+                    }
+                );
+            } else {
+                //actualizarInformacionPos(); //Con info
+                // console.log('agregar con exito');
+                notyf.error('Tu procedimiento de actualización de datos ha finalizado');
+            }
+        }
+        /*
+        if (result.isConfirmed) {
+        $.post("../../../../App/Controllers/Central/AsistenciaC/EliminarC.php", {
+                id_object: id_object
+            },
             function (data) {
-                // console.log(data);
-
-                let jsonData = JSON.parse(data);
-                let bool = jsonData.bool;
-                if (bool) {
-                    actualizarInformacionPos();
-                    //console.log('agregar');
+                if (data == 'delete'){
+                    notyf.success('Asistencia eliminada con éxito')
                 } else {
-                    notyf.error('La CLUES ya ha sido asignada. Por favor, actualiza la página para reflejar los cambios.');
+                    notyf.error(mensajeSalida);
                 }
+                buscarAsistencia();
             }
         );
-    } else {
-        actualizarInformacionPos(); //Con info
-        // console.log('agregar con exito');
-    }
+    }*/
+    });
 
-    /*
-    $.post("../../../../App/Controllers/Central/PostulanteC/updateDataC.php", {
-        id_postulantes: id_postulantes,
-        id_clues: $("#id_clues").val(),
-    },
-        function (data) {
-            console.log(data);
-        }
-    );
-    */
+
+
+
+
+
+
 }
 
 //actualizarInformacionPos();
