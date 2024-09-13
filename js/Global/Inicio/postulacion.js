@@ -128,7 +128,7 @@ function actualizarInformacionPos() {
         curp: $("#curp").val(),
         email: $("#email").val(),
         telefono: $("#telefono").val(),
-        id_cat_entidad_nacimiento: $("#id_cat_entidad_nacimiento").val(),
+        id_cat_entidad_nacimiento: 1,
         id_clues: $("#id_clues").val(),
     },
         function (data) {
