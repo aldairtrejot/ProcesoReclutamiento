@@ -14,6 +14,7 @@ $connectionDBsPro = pg_pconnect($connectionDB);
 include 'queryM.php';
 
 $postulantesM = new PostulantesM();
+$now = 'NOW()';
 
 $condicion = [
     'id_postulantes' => $_POST['id_postulantes']
@@ -30,6 +31,7 @@ $datos = [
     'telefono' => $_POST['telefono'],
     'id_cat_entidad_nacimiento' => $_POST['id_cat_entidad_nacimiento'],
     'id_clues' => $_POST['id_clues'],
+    'fecha_actualizacion' => $now,
 ];
 
 
