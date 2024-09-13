@@ -108,6 +108,7 @@
                         </div>
                     </div>
 
+                    <!--
                     <div class="row mx-1">
                         <div class="col-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                             <fieldset disabled>
@@ -129,6 +130,7 @@
                                 </div>
                             </fieldset>
                         </div>
+-->
 
 
                     </div>
@@ -181,8 +183,6 @@
                     </div>
 
 
-
-
                     <div class="div-spacing"></div>
                     <div class="modal-footer">
                         <button onclick="ocultarAgregarEditar();" type="button" class="btn btn-secondary"
@@ -190,6 +190,8 @@
                         <button type="button" class="btn btn-success save-botton-modal"
                             onclick="return validarDataPost();"><i class="fas fa-save"></i> Guardar</button>
                         <input type="hidden" id="id_clues_result">
+                        <input type="hidden" id="id_cat_entidad_nacimiento" value="1">
+                        
                     </div>
                 </div>
             </div>
