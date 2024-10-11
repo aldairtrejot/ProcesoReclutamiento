@@ -1,7 +1,7 @@
 <?php //include '../../../../conexion.php'; 
-$password = "pg2024";
+$password = "sirh2024";
 $username = "postgres";
-$dbname = "procesoreclutamiento_produccion";
+$dbname = "procesoreclutamiento_delete";
 $host = "localhost";
 $port = "5432";
 $options = "--client_encoding=UTF8";
